@@ -1,4 +1,4 @@
-# React Hello World!
+# React Hello World! [![Build Status](https://travis-ci.org/TimPrd/devops-react.svg?branch=master)](https://travis-ci.org/TimPrd/devops-react)
 
 ## Available Scripts
 

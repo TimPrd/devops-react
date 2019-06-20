@@ -1,0 +1,73 @@
+# blacklist
+#branches:
+#  except:
+#    - DEV
+
+# whitelist
+branches:
+  only:
+    - master
+
+language: node_js
+node_js:
+  - "stable"
+
+
+#sudo: required
+
+#services:
+#  - docker
+
+#env:
+#  - DOCKER_COMPOSE_VERSION=1.23.1
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm test
+  - npm run build
+# deploy:
+#   provider: surge
+#   skip_cleanup: true
+#   domain: <my_name_here>.surge.sh
+#   project: ./build/
+on:
+  branch: master
+
+#before_install:
+#   - sudo rm /usr/local/bin/docker-compose
+#   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+#   - chmod +x docker-compose
+#   - sudo mv docker-compose /usr/local/bin
+
+# before_script:
+#   - cd ./[BACK]
+#   - npm install
+#   - docker-compose build
+#   - docker-compose up -d
+#   - docker exec -it bh_node npm install
+#   - cd ../[FRONT]
+#   - npm install
+#   - npm install terser@3.14.1 --save-dev
+#   - npm run test
+#   - npm run build
+# #  - docker-compose run node sequelize db:migrate
+# #  - docker exec -it bh_node ./node_modules/sequelize-cli/bin/sequelize db:migrate
+# # - docker exec -it bh_node node_modules/.bin/sequelize db:seed:all
+
+# # - docker-compose run users-service knex seed:run --env development --knexfile app/knexfile.js
+# #   - docker-compose run locations-service knex migrate:latest --env development --knexfile app/knexfile.js
+# #   - docker-compose run locations-service knex seed:run --env development --knexfile app/knexfile.js
+
+# script:
+# # - docker exec -it bh_node node_modules/.bin/sequelize db:migrate
+# # - npm run travis
+#   - docker ps
+
+# after_script:
+#   - docker-compose down
+
+# after_success:
+#   - docker exec -it bh_node npm run coveralls
