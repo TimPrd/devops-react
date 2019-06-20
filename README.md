@@ -1,4 +1,4 @@
-# React Hello World! [![Build Status](https://travis-ci.org/TimPrd/devops-react.svg?branch=master)](https://travis-ci.org/TimPrd/devops-react)
+# React Hello World! [![Build Status](https://travis-ci.org/TimPrd/devops-react.svg?branch=master)](https://travis-ci.org/TimPrd/devops-react) [![Coverage Status](https://coveralls.io/repos/github/TimPrd/devops-react/badge.svg?branch=master)](https://coveralls.io/github/TimPrd/devops-react?branch=master)
 
 ## Available Scripts
 
